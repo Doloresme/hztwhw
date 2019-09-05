@@ -1,0 +1,32 @@
+{
+  "name": "hztwhw",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp default"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Doloresme/hztwhw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Doloresme/hztwhw/issues"
+  },
+  "homepage": "https://github.com/Doloresme/hztwhw#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-less": "^4.0.1",
+    "gulp-uglify": "^3.0.2",
+    "open": "^6.4.0"
+  }
+}
