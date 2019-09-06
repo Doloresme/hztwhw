@@ -16,7 +16,7 @@ var open = require('open');
 
 /*把bower下载的前端框架放到我们项目当中*/
 gulp.task('lib',function () {
-    gulp.src('bower_components/**/*.js')
+    gulp.src(app.srcPath+'**/*.js')
         .pipe(gulp.dest(app.buildPath+'lib'))
         .pipe(gulp.dest(app.distPath+'lib'))
         .pipe(connect.reload()) //当内容发生改变时， 重新加载。
@@ -39,10 +39,10 @@ gulp.task('html',function () {
 gulp.task('less',function () {
     gulp.src(app.srcPath+'**/*.less')
         .pipe(less())
-        .pipe(gulp.dest(app.buildPath+'css/'))
+        .pipe(gulp.dest(app.buildPath))
         /*经过压缩，放到dist目录当中*/
         .pipe(cssmin())
-        .pipe(gulp.dest(app.distPath+'css/'))
+        .pipe(gulp.dest(app.distPath))
         .pipe(connect.reload())
 });
 
@@ -71,7 +71,7 @@ gulp.task('image',function () {
 /*同时执行多个任务 [其它任务的名称]
  * 当前bulid时，会自动把数组当中的所有任务给执行了。
  * */
-gulp.task('build',['less','html','js','image','lib']);
+gulp.task('build',['less','html','js','image']);
 
 
 /*定义server任务
@@ -85,7 +85,6 @@ gulp.task('server',['build'],function () {
         port:9999  //端口号
     })
     /*监听哪些任务*/
-    gulp.watch('bower_components/**/*',['lib']);
     gulp.watch(app.srcPath+'**/*.html',['html']);
     gulp.watch(app.srcPath+'js/**/*.js',['js']);
     gulp.watch(app.srcPath+'images/**/*',['image']);

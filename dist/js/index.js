@@ -1,0 +1,1 @@
+!function(){Image.BLANK="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";var A={image:["../img/slider.jpg"],fatherNode:document.getElementById("banner-box")},e=$("#banner-box").width();new Slider(A),$("#banner-box .sliderBox li").css("width",e)}();

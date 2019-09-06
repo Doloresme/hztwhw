@@ -1,0 +1,1 @@
+location.searchMap=function(){var r=location.search;if(!r)return{};for(var a=r.replace("?","").split("&"),t={},e=0;e<a.length;e++){var i=a[e].split("="),n=i[0],c=i[1];t[n]?Array.isArray(t[n])?t[n].push(c):t[n]=[t[n],c]:t[n]=c}return t};
