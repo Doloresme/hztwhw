@@ -3,8 +3,8 @@
   height: 60px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
 }
-.wrap {
-  width: 1400px;
+.wrapper {
+  width: 1080px;
   margin: 0 auto;
   font-size: 14px;
   color: #2D2F33;

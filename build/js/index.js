@@ -4,7 +4,7 @@
   Image.BLANK = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
   var bannerBox = document.getElementById('banner-box');
   var opt = {
-    image: ['../img/slider.jpg'],
+    image: ['./img/slider.jpg', './img/slider1.jpg'],
     fatherNode: bannerBox
   };
   var sliderBoxW = $('#banner-box').width();

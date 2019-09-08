@@ -1,3 +1,18 @@
-body div {
-  color: red;
+#banner-box {
+  width: 100%;
+  min-width: 1200px;
+  height: 380px;
+  position: relative;
+  margin: 0px auto;
+  overflow: hidden;
+  top: -1px;
+}
+#banner-box .leftBtn {
+  background-image: url('../img/left-arrow.png');
+}
+#banner-box .rightBtn {
+  background-image: url('../img/right-arrow.png');
+}
+#banner-box:hover .sliderBtn {
+  opacity: 0;
 }

@@ -61,10 +61,10 @@ gulp.task('js',function () {
 
 /*压缩图片*/
 gulp.task('image',function () {
-    gulp.src(app.srcPath+'images/**/*')
-        .pipe(gulp.dest(app.buildPath+'images'))
+    gulp.src(app.srcPath+'img/**/*')
+        .pipe(gulp.dest(app.buildPath+'img'))
         .pipe(imagemin())
-        .pipe(gulp.dest(app.distPath+'images'))
+        .pipe(gulp.dest(app.distPath+'img'))
         .pipe(connect.reload())
 });
 
@@ -87,8 +87,8 @@ gulp.task('server',['build'],function () {
     /*监听哪些任务*/
     gulp.watch(app.srcPath+'**/*.html',['html']);
     gulp.watch(app.srcPath+'js/**/*.js',['js']);
-    gulp.watch(app.srcPath+'images/**/*',['image']);
-    gulp.watch(app.srcPath+'style/**/*.less',['less']);
+    gulp.watch(app.srcPath+'img/**/*',['image']);
+    gulp.watch(app.srcPath+'css/**/*.less',['less']);
 
     //通过浏览器把指定的地址 （http://localhost:9999）打开。
     open('http://localhost:9999');
