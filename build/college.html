@@ -21,10 +21,24 @@
     <div id="footer"></div>
 
     <script type="text/html" id="tpl-college-list">
-        ul.
-        {{each data as tpl}}
-            
-        {{/each}}
+        <ul class="college-ul clearfix">
+            {{each list as value}}
+                <li class="college-li float-left">
+                    <a href="{{value.url}}">
+                        <div class="left">
+                            <img src="{{value.avatar}}" alt="">
+                            <p>{{value.name}}</p>
+                        </div>
+                        <div class="right c5A">
+                            <div class="title f16 f600">{{value.title}}</div>
+                            <div class="edu f14">{{value.edu}}</div>
+                            <div class="desc c68">{{value.desc}}</div>
+                        </div>
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+        
     </script>
     <script src="./js/lib/jquery.js"></script>
     <script src="./js/lib/template-web.js"></script>
