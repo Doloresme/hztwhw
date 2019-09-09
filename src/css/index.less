@@ -1,6 +1,3 @@
-body{
-    
-}
 #banner-box{
     width: 100%;
     min-width: 1200px;
@@ -18,5 +15,84 @@ body{
     }
     &:hover .sliderBtn{
         opacity: 0;
+    }
+}
+
+.container{
+    width: 100%;
+    background-color: #F4F6F7;
+    padding: 24px 0;
+    .index-box{
+        height: 568px;
+        margin-bottom: 24px;
+    }
+    .index-box:nth-of-type(2n){
+        background-color: #F4F6F7;
+    }
+    .index-box:nth-of-type(2n+1){
+        background-color: #fff;
+    }
+    .box-title{
+        height: 80px;
+        line-height: 80px;
+    }
+    .release{
+        .wrapper{
+            width: 1284px;
+        }
+        .left{
+            position: relative;
+            width: 680px;
+            .trade-box{
+                width:680px;
+                height:456px;
+                border-radius:5px;
+                border:1px solid rgba(169,160,156,1);
+                box-sizing: border-box;
+                padding: 10px;
+                a{
+                    display: inline-block;
+                    max-width: 426px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    font-size: 16px;
+                    vertical-align: -4px;
+                }
+                li{
+                    list-style: disc;
+                    margin: 25px 10px 35px 20px;
+                    font-size: 10px;
+                }
+            }
+            .nav-box{
+                position: absolute;
+                top: 80px;
+                left: -70px;
+                width: 60px;
+                height: 456px;
+                li{
+                    margin-bottom: 6px;
+                    a{
+                        color: #fff;
+                    }
+                    span{
+                        display: block;
+                        text-align: center;
+                    }
+                    .icon::before{
+                        display: block;
+                        text-align: center;
+                        margin: 15px auto 5px;
+                    }
+                }
+            }
+        }
+        .middle{
+            margin: 0 20px;
+            width:360px;
+            height:502px;
+            border-radius:10px;
+        }
     }
 }

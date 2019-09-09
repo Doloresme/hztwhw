@@ -1,0 +1,38 @@
+.footer {
+  height: 110px;
+  background: #5a483e;
+  padding: 40px 0 30px;
+}
+.footer .website-info {
+  width: 460px;
+  text-align: center;
+}
+.footer .website-info img {
+  width: 165px;
+  height: 26px;
+  margin-bottom: 20px;
+}
+.footer .contact {
+  width: 340px;
+}
+.footer .friend-link {
+  width: 280px;
+}
+.footer .title {
+  height: 26px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.footer p {
+  height: 17px;
+  line-height: 17px;
+  margin-bottom: 10px;
+}
+.footer .icon::before {
+  vertical-align: -2px;
+  width: 16px;
+  margin-right: 5px;
+}
+.footer .icon-police::before {
+  width: 20px;
+}

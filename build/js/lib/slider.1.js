@@ -20,7 +20,7 @@
     }
 
     this.wrap = option.fatherNode || document.getElementsByTagName('body')[0];
-    this.time = option.time || 2000; //轮播间隔时间
+    this.time = option.time || 3000; //轮播间隔时间
 
     this.index = 0;
     this.w = option.w;

@@ -107,6 +107,9 @@
 .f24 {
   font-size: 24px;
 }
+.f36 {
+  font-size: 36px;
+}
 .float-left {
   float: left;
 }
@@ -118,9 +121,70 @@
   display: block;
   clear: both;
 }
+.f600 {
+  font-weight: 600;
+}
 .w100 {
   width: 100%;
 }
 .wrapper {
   width: 1080px;
+}
+.icon::before {
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.icon-home::before {
+  background-image: url('../img/icon_home.png');
+}
+.icon-release::before {
+  background-image: url('../img/icon_release.png');
+}
+.icon-event::before {
+  background-image: url('../img/icon_event.png');
+}
+.icon-strctrue::before {
+  background-image: url('../img/icon_strctrue.png');
+}
+.icon-company::before {
+  background-image: url('../img/icon_hand.png');
+}
+.icon-share::before {
+  background-image: url('../img/icon_share.png');
+}
+.icon-search-fff::before {
+  background-image: url('../img/icon_search_fff.png');
+}
+.icon-police::before {
+  background-image: url('../img/icon_police.png');
+  vertical-align: -4px;
+}
+.icon-phone::before {
+  background-image: url('../img/icon_home_s.png');
+  height: 14px;
+}
+.icon-email::before {
+  background-image: url('../img/icon_email.png');
+  height: 12px;
+}
+.icon-address::before {
+  background-image: url('../img/icon_address.png');
+  height: 18px;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid red;
+}
+.hide {
+  display: none;
+}
+body {
+  background: #F4F6F7;
 }

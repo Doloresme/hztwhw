@@ -16,3 +16,79 @@
 #banner-box:hover .sliderBtn {
   opacity: 0;
 }
+.container {
+  width: 100%;
+  background-color: #F4F6F7;
+  padding: 24px 0;
+}
+.container .index-box {
+  height: 568px;
+  margin-bottom: 24px;
+}
+.container .index-box:nth-of-type(2n) {
+  background-color: #F4F6F7;
+}
+.container .index-box:nth-of-type(2n+1) {
+  background-color: #fff;
+}
+.container .box-title {
+  height: 80px;
+  line-height: 80px;
+}
+.container .release .wrapper {
+  width: 1284px;
+}
+.container .release .left {
+  position: relative;
+  width: 680px;
+}
+.container .release .left .trade-box {
+  width: 680px;
+  height: 456px;
+  border-radius: 5px;
+  border: 1px solid #a9a09c;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.container .release .left .trade-box a {
+  display: inline-block;
+  max-width: 426px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  vertical-align: -4px;
+}
+.container .release .left .trade-box li {
+  list-style: disc;
+  margin: 25px 10px 35px 20px;
+  font-size: 10px;
+}
+.container .release .left .nav-box {
+  position: absolute;
+  top: 80px;
+  left: -70px;
+  width: 60px;
+  height: 456px;
+}
+.container .release .left .nav-box li {
+  margin-bottom: 6px;
+}
+.container .release .left .nav-box li a {
+  color: #fff;
+}
+.container .release .left .nav-box li span {
+  display: block;
+  text-align: center;
+}
+.container .release .left .nav-box li .icon::before {
+  display: block;
+  text-align: center;
+  margin: 15px auto 5px;
+}
+.container .release .middle {
+  margin: 0 20px;
+  width: 360px;
+  height: 502px;
+  border-radius: 10px;
+}
