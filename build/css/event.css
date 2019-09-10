@@ -1,0 +1,10 @@
+.event-search-box {
+  height: 80px;
+  margin-top: 20px;
+}
+.event-search-box span {
+  line-height: 80px;
+}
+.event-search-box .event-input {
+  position: relative;
+}

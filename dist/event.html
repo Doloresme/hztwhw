@@ -8,14 +8,21 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/college.css">
+    <link rel="stylesheet" href="./css/event.css">
     <title>大咖学院</title>
 </head>
 <body>
     <div id="header"></div>
     <div class="container">
-        <div class="wrapper college-view">
-
+        <div class="event-search-box bgff">
+            <div class="wrapper">
+                <span class="f20 c5A topic">专题活动 </span><span class="f20 c5A"> Thematic activities</span>
+                <input type="text" name="keyword" placeholder="请输入关键词" class="event-input">
+                <i class="icon icon-search"></i>
+            </div>
+        </div>
+        <div class="wrapper event-view">
+            
         </div>
     </div>
     <div id="pagination">
@@ -23,10 +30,10 @@
     </div>
     <div id="footer"></div>
 
-    <script type="text/html" id="tpl-college-list">
-        <ul class="college-ul clearfix">
+    <script type="text/html" id="tpl-event-list">
+        <ul class="event-ul clearfix">
             {{each list as value}}
-                <li class="college-li float-left">
+                <li class="event-li float-left">
                     <a href="{{value.url}}">
                         <div class="left">
                             <img src="{{value.avatar}}" alt="">
@@ -47,6 +54,6 @@
     <script src="./js/lib/template-web.js"></script>
     <script src="./js/lib/pagination.js"></script>
     <script src="./js/core.js"></script>
-    <script src="./js/college.js"></script>
+    <script src="./js/event.js"></script>
 </body>
 </html>

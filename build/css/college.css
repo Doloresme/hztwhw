@@ -94,6 +94,11 @@
   padding: 10px 20px;
   margin-top: 35px;
 }
+.view-content.aboutUs .title p {
+  display: block;
+  text-align: center;
+  max-width: 100%;
+}
 .view-content .title {
   height: 55px;
   line-height: 55px;
@@ -106,4 +111,5 @@
 .view-content .detail {
   margin: 20px 0;
   min-height: 300px;
+  line-height: 20px;
 }

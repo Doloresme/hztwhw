@@ -36,10 +36,10 @@
   line-height: 80px;
 }
 .container .release .wrapper {
-  width: 1284px;
+  width: 1080px;
+  position: relative;
 }
 .container .release .left {
-  position: relative;
   width: 680px;
 }
 .container .release .left .trade-box {
@@ -91,4 +91,8 @@
   width: 360px;
   height: 502px;
   border-radius: 10px;
+}
+.container .release .right {
+  position: absolute;
+  right: -40px;
 }
