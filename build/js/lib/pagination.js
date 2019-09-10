@@ -11,15 +11,16 @@
   Pagination.prototype.init = function () {
     this.draw();
     this.event();
-  }; // Pagination.prototype.event = function(){
-  //     var self = this;
-  //     this.fatherNode.on('click', 'li', function(){
-  //         var page = $(this).data('page');
-  //         page && self.setPage(page);
-  //         self.draw();
-  //     });
-  // }
+  };
 
+  Pagination.prototype.event = function () {
+    var self = this;
+    this.fatherNode.on('click', 'li', function () {
+      var page = $(this).data('page');
+      page && self.setPage(page);
+      self.draw();
+    });
+  };
 
   Pagination.prototype.setPage = function (page) {
     var page = Math.min(Math.max(page, 1), this.getTotalPages());
@@ -55,7 +56,7 @@
     }
 
     if (pageNumber - 3 > 2 && totalPages > 8) {
-      pageStr += '<span>...<span>';
+      pageStr += '<span>...</span>';
     } // 中间页码
 
 
@@ -82,7 +83,7 @@
 
 
     if (pageNumber + 3 < totalPages - 1 && totalPages > 8) {
-      pageStr += '<span>...<span>';
+      pageStr += '<span>...</span>';
     }
 
     if (pageNumber !== totalPages && pageNumber < totalPages - 3 && totalPages > 7) {

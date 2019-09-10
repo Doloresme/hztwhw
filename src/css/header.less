@@ -1,8 +1,9 @@
 .header{
+    position: relative;
     width: 100%;
+    background: #fff;
     height:60px;
     line-height: 60px;
-    background: #fff;
     .logo,.search,.login{
         display: inline-block;
     }
@@ -25,6 +26,7 @@
         padding: 0 10px;
         box-sizing: border-box;
         margin: 18px 20px;
+        cursor: pointer;
         .icon-search::before{
             background-image: url('../img/icon_search.png');
             width: 15px;
@@ -58,7 +60,7 @@ a {
     display: inline-block;
     line-height: 60px;
     padding:0 15px;
-    font-weight: 600;
+    // font-weight: 600;
 }
 .nav .first-nav a.hasAngel::after{
     content:"";
@@ -125,4 +127,31 @@ a {
 }
 .nav .nav2 li:hover a{
     color: #ED473F;
+}
+
+.search-box{
+    position: absolute;
+    width: 100%;
+    top: 59px;
+    z-index: 9;
+    height: 300px;
+    background: #fff;
+    .form-box{
+        padding-top: 108px;
+        input, select{
+            margin-right: 20px;
+            height: 40px;
+            line-height: 40px;
+            border-radius:20px;
+            border:1px solid rgba(174,176,181,1);
+        }
+        select{
+            width: auto;
+            padding: 0 2%;
+        }
+        .search-input{
+            padding: 0 20px;
+            width: 400px;
+        }
+    }
 }
