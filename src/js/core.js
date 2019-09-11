@@ -1,3 +1,15 @@
+template.defaults.imports.dateFormat = function(timestamp, format){
+    function add0(m) { return m < 10 ? '0' + m : m };
+    var time = new Date(timestamp);
+    var y = time.getFullYear();
+    var m = time.getMonth() + 1;
+    var d = time.getDate();
+    var h = time.getHours();
+    var mm = time.getMinutes();
+    var s = time.getSeconds();
+    return y + '-' + add0(m) + '-' + add0(d) + ' ' + add0(h) + ':' + add0(mm);
+};
+
 (function () {
 
     var headerCallback = function () {

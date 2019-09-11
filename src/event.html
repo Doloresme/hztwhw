@@ -9,16 +9,18 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/event.css">
-    <title>大咖学院</title>
+    <title>专题活动</title>
 </head>
 <body>
     <div id="header"></div>
     <div class="container">
         <div class="event-search-box bgff">
             <div class="wrapper">
-                <span class="f20 c5A topic">专题活动 </span><span class="f20 c5A"> Thematic activities</span>
-                <input type="text" name="keyword" placeholder="请输入关键词" class="event-input">
-                <i class="icon icon-search"></i>
+                <div class="input-box float-right">
+                    <input type="text" name="keyword" placeholder="请输入关键词" class="event-input">
+                    <i class="icon icon-search"></i>
+                </div>
+                <span class="f20 c5A topic f600">专题活动 <i class="bg"></i></span><span class="f20 c5A f600 en"> Thematic activities</span>
             </div>
         </div>
         <div class="wrapper event-view">
@@ -35,14 +37,11 @@
             {{each list as value}}
                 <li class="event-li float-left">
                     <a href="{{value.url}}">
-                        <div class="left">
-                            <img src="{{value.avatar}}" alt="">
-                            <p class="f18 center">{{value.name}}</p>
-                        </div>
-                        <div class="right c5A">
-                            <div class="title f16 f600">{{value.title}}</div>
-                            <div class="edu f14">{{value.edu}}</div>
-                            <div class="desc c68">{{value.desc}}</div>
+                        <img src="{{value.avatar}}" alt="">
+                        <div class="c27">
+                            <div class="title f22 f600">{{value.title}}</div>
+                            <div class="time f14">{{value.date | dateFormat 'yyyy-MM-dd hh:mm'}}</div>
+                            <button class="btn btn-default">查看详情</button>
                         </div>
                     </a>
                 </li>

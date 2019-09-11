@@ -1,6 +1,6 @@
 (function () {
   var data = {
-    coverImgUrl: '../img/1.png',
+    coverImgUrl: '../img/slider1.jpg',
     name: '马云老师',
     edu: '启明教育',
     desc: '这里是大咖简介这里是大咖简介这里是大咖简介这里是大咖简介这里是介这里是大咖简介这里是大咖简介这里是大咖简介这里是大咖简介这里是大咖简介',
@@ -8,6 +8,6 @@
     date: 1568094793625,
     detail: '在中国，重庆机场的人脸识别系统成功匹配到'
   };
-  var html = template('tpl-person-view', data);
-  $('.container .wrapper').html(html);
+  var html = template('tpl-event-view', data);
+  $('.container').html(html);
 })();

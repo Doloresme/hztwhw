@@ -4,10 +4,103 @@
     span{
         line-height: 80px;
         &.topic{
-
+            position: relative;
+            .bg{
+                position: absolute;
+                top: 15px;
+                left: 0;
+                display: inline-block;
+                width:85px;
+                height:10px;
+                background:rgba(169,160,156,1);
+                opacity:0.3;
+            }
         }
     }
-    .event-input{
+    .input-box{
         position: relative;
+        margin-top: 25px;
+        .event-input{
+            width:210px;
+            height:30px;
+            background:rgba(255,255,255,1);
+            border-radius:15px;
+            border:1px solid rgba(221,221,221,1);
+            padding: 0 15px;
+            
+        }
+        .icon{
+            position: absolute;
+            right: 15px;
+            top: 6px;
+        }
+        .icon-search::before{
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+.event-view{
+    .event-ul{
+        margin: 10px 0 20px;
+    }
+    .event-li{
+        position: relative;
+        width:530px;
+        height:440px;
+        background:rgba(255,255,255,1);
+        border-radius:5px;
+        margin-right: 20px;
+        &:nth-of-type(2n){
+            margin-right: 0;
+        }
+        img{
+            width:530px;
+            height:280px;
+            border-radius:5px 5px 0px 0px;
+        }
+        .title{
+            line-height: 30px;
+            max-height: 60px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        .c27{
+            padding: 10px;
+        }
+        .time{
+            line-height: 20px;
+            margin-top: 15px;
+        }
+        .btn{
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -50px;
+        }
+    }
+}
+
+// eventView
+
+.view-top{
+    .title{
+        line-height: 56px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .time, .desc{
+        width: 746px;
+        line-height: 20px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    .detail{
+        background: #fff;
+        min-height: 300px;
     }
 }
