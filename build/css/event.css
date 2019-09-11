@@ -92,7 +92,12 @@
   margin-top: 10px;
   display: inline-block;
 }
-.view-top .detail {
+.view-content p {
+  line-height: 25px;
+  margin: 20px 0 10px;
+}
+.view-content .detail {
   background: #fff;
   min-height: 300px;
+  padding: 30px;
 }

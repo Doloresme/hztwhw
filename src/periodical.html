@@ -23,16 +23,20 @@
     </div>
     <div id="footer"></div>
 
-    <script type="text/html" id="tpl-event-list">
-        <ul class="event-ul clearfix">
+    <script type="text/html" id="tpl-periodical-list">
+        <ul class="periodical-ul clearfix">
             {{each list as value}}
-                <li class="event-li float-left">
+                <li class="periodical-li float-left">
                     <a href="{{value.url}}">
-                        <img src="{{value.avatar}}" alt="">
-                        <div class="c27">
-                            <div class="title f22 f600">{{value.title}}</div>
+                        <div class="title f24 f600">{{value.title}}</div>
+                        <div class="card-box">
+                            <i class="icon icon-quot-left"></i>
+                            <span class="desc">{{value.desc}}</span>
                             <div class="time f14">{{value.date | dateFormat 'yyyy-MM-dd hh:mm'}}</div>
-                            <button class="btn btn-default">查看详情</button>
+                            <button class="btn btn-default">阅读全文</button>
+                        </div>
+                        <div class="float-right">
+                            <img src="{{value.coverImgUrl}}" alt="" class="float-right">
                         </div>
                     </a>
                 </li>

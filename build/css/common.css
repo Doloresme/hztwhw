@@ -11,7 +11,7 @@
   line-height: 40px;
 }
 .btn-default {
-  width: 100px;
+  padding: 0 15px;
   height: 30px;
   background: #ffffff;
   border-radius: 17px;
@@ -200,6 +200,14 @@
 .icon-address::before {
   background-image: url('../img/icon_address.png');
   height: 18px;
+}
+.icon-quto-left::before {
+  background-image: url('../img/icon_quot_left.png');
+  height: 16px;
+}
+.icon-quto-right::before {
+  background-image: url('../img/icon_quot_right.png');
+  height: 16px;
 }
 .triangle {
   width: 0;
