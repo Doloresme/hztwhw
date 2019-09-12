@@ -24,19 +24,24 @@
     <div id="footer"></div>
 
     <script type="text/html" id="tpl-periodical-list">
-        <ul class="periodical-ul clearfix">
+        <ul class="periodical-ul">
             {{each list as value}}
-                <li class="periodical-li float-left">
+                <li class="periodical-li clearfix">
                     <a href="{{value.url}}">
-                        <div class="title f24 f600">{{value.title}}</div>
-                        <div class="card-box">
-                            <i class="icon icon-quot-left"></i>
-                            <span class="desc">{{value.desc}}</span>
-                            <div class="time f14">{{value.date | dateFormat 'yyyy-MM-dd hh:mm'}}</div>
-                            <button class="btn btn-default">阅读全文</button>
+                        <div class="card-box bgff">
+                            <div class="title f24 f600">{{value.title}}</div>
+                            <div class="desc f12">
+                                <i class="icon icon-quot-left"></i>
+                                <i class="icon icon-quot-right"></i>
+                                <span>{{value.desc}}</span>
+                            </div>
+                            <div class="bottom">
+                                <span class="time f14">{{value.date | dateFormat 'yyyy-MM-dd hh:mm'}}</span>
+                                <button class="btn btn-default">阅读全文</button>
+                            </div>
                         </div>
-                        <div class="float-right">
-                            <img src="{{value.coverImgUrl}}" alt="" class="float-right">
+                        <div class="img-box bgE0">
+                            <img src="{{value.coverImgUrl}}" alt="" class="periodical-img">
                         </div>
                     </a>
                 </li>
@@ -47,6 +52,6 @@
     <script src="./js/lib/template-web.js"></script>
     <script src="./js/lib/pagination.js"></script>
     <script src="./js/core.js"></script>
-    <script src="./js/periodical.js"></script>
+    <script src="./js/aperiodical.js"></script>
 </body>
 </html>

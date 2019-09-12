@@ -102,6 +102,9 @@
 .bgff {
   background-color: #fff;
 }
+.bgE0 {
+  background-color: #E0E7EA;
+}
 .f12 {
   font-size: 12px;
 }
@@ -201,11 +204,11 @@
   background-image: url('../img/icon_address.png');
   height: 18px;
 }
-.icon-quto-left::before {
+.icon-quot-left::before {
   background-image: url('../img/icon_quot_left.png');
   height: 16px;
 }
-.icon-quto-right::before {
+.icon-quot-right::before {
   background-image: url('../img/icon_quot_right.png');
   height: 16px;
 }
@@ -277,6 +280,9 @@ body {
 }
 .sp.qzone {
   background-image: url('../img/share_zone.png');
+}
+.container {
+  margin-top: 20px;
 }
 .banner {
   width: 100%;
