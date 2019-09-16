@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,37 +12,82 @@
     <link rel="stylesheet" href="./css/enterprise.css">
     <title>杭业</title>
 </head>
+
 <body>
     <div id="header"></div>
     <div class="container">
         <div class="enterprise-function-box bgff">
             <div class="wrapper">
-                <div class="input-box float-right">
-                    <input type="text" name="keyword" placeholder="请输入关键词" class="event-input">
-                    <i class="icon icon-search"></i>
+                <ul>
+                    <li class="li">
+                        <span class="filter float-left">服务类型：</span>
+                        <div class="filter-box">
+                            <button class="btn btn-default active">全部</button>
+                            <button class="btn btn-default active">活动演艺类</button>
+                            <button class="btn btn-default active">创意传播类</button>
+                            <button class="btn btn-default active">设计服务类</button>
+                        </div>
+                    </li>
+                    <li class="li">
+                        <span class="filter float-left">企业类型：</span>
+                        <div class="filter-box">
+                            <button class="btn btn-default active">全部</button>
+                            <button class="btn btn-default active">活动演艺类</button>
+                            <button class="btn btn-default active">创意传播类</button>
+                            <button class="btn btn-default active">设计服务类</button>
+                        </div>
+                    </li>
+                    <li class="li">
+                        <span class="filter float-left">所属地区：</span>
+                        <div class="filter-box">
+                            <button class="btn btn-default active">全部</button>
+                            <button class="btn btn-default active">活动演艺类</button>
+                            <button class="btn btn-default active">创意传播类</button>
+                            <button class="btn btn-default active">设计服务类</button>
+                        </div>
+                    </li>
+                    <li class="li">
+                        <span class="filter float-left">成立年限：</span>
+                        <div class="filter-box">
+                            <button class="btn btn-default active">全部</button>
+                            <button class="btn btn-default ">活动演艺类</button>
+                            <button class="btn btn-default ">创意传播类</button>
+                            <button class="btn btn-default ">设计服务类</button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="sort filter">
+                    <div class="input-box float-right">
+                        <input type="text" name="keyword" placeholder="请输入企业名称" class="enterprise-input">
+                        <i class="icon icon-search"></i>
+                    </div>
+                    <span class="type active" data-type="complex">综合排序</span>
+                    <span class="type" data-type="complex">评分最高<i class="icon icon-sort"></i></span>
+                    <span class="type" data-type="complex">预定最多<i class="icon icon-sort"></i></span>
                 </div>
-                <span class="f20 c5A topic f600">专题活动 <i class="bg"></i></span><span class="f20 c5A f600 en"> Thematic activities</span>
             </div>
         </div>
-        <div class="wrapper event-view">
-            
+        <div class="wrapper enterprise-view">
+
         </div>
     </div>
     <div id="pagination">
-        
+
     </div>
     <div id="footer"></div>
 
-    <script type="text/html" id="tpl-event-list">
-        <ul class="event-ul clearfix">
+    <script type="text/html" id="tpl-enterprise-list">
+        <ul class="enterprise-ul clearfix">
             {{each list as value}}
-                <li class="event-li float-left">
+                <li class="enterprise-li float-left">
                     <a href="{{value.url}}">
                         <img src="{{value.avatar}}" alt="">
-                        <div class="c27">
-                            <div class="title f22 f600">{{value.title}}</div>
-                            <div class="time f14">{{value.date | dateFormat 'yyyy-MM-dd hh:mm'}}</div>
-                            <button class="btn btn-default">查看详情</button>
+                        <div class="name f16 f600">{{value.title}}</div>
+                        {{each tags as tag}}
+                            <button class="btn btn-default">tag</button>
+                        {{/each}}
+                        <div class="rating">
+
                         </div>
                     </a>
                 </li>
@@ -55,4 +101,5 @@
     <script src="./js/core.js"></script>
     <script src="./js/enterprise.js"></script>
 </body>
+
 </html>

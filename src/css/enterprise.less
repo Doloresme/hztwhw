@@ -1,0 +1,93 @@
+.enterprise-function-box{
+    ul{
+        padding: 10px 0;
+        border-bottom: 1px solid #DEDAD8;
+    }
+    li{
+        height: 50px;
+    }
+    .filter{
+        line-height: 50px;
+    }
+    .filter-box{
+        padding: 13px;
+        margin-left: 72px;
+        .btn{
+            border: none;
+            background: #fafafa;
+            height:24px;
+            background:rgba(248,248,248,1);
+            border-radius:12px;
+            line-height: 24px;
+            font-size: 14px;
+            margin-right: 10px;
+            color: #272A34;
+        }
+        .btn:hover{
+            color: #272A34;
+        }
+        .btn.active{
+            color: #fff;
+            background: #A9A09C;
+        }
+    }
+    .input-box{
+        position: relative;
+        .enterprise-input{
+            width:210px;
+            height:30px;
+            background:rgba(255,255,255,1);
+            border-radius:15px;
+            border:1px solid rgba(221,221,221,1);
+            padding: 0 15px;
+        }
+        .icon{
+            position: absolute;
+            right: 15px;
+            top: 6px;
+        }
+        .icon-search::before{
+            width: 18px;
+            height: 18px;
+        }
+    }
+    .sort{
+        height: 58px;
+        line-height: 58px;
+        .type{
+            margin-right: 40px;
+            color: #A9A09C;
+            &.active{
+                color: #5A483E;
+                font-weight: 600;
+            }
+        }
+        .icon-sort{
+            vertical-align: -1px;
+            margin-left: 3px;
+        }
+    }
+}
+
+.enterprise-view{
+    padding: 10px 0 40px;
+    .enterprise-li{
+        width:255px;
+        height:331px;
+        border-radius:5px;
+        margin-right: 20px;
+        background-color: #fff;
+        &:nth-of-type(4n){
+            margin-right: 0;
+        }
+        img{
+            width:255px;
+            height:200px;
+            border-radius:5px 5px 0px 0px;
+        }
+        .name, .btn, .rating{
+            margin-left: 10px;
+        }
+        
+    }
+}

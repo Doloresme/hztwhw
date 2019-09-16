@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/enterprise.css">
+    <title>企业详情</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="wrapper enterprise-view">
+            
+        </div>
+    </div>
+    <div id="footer"></div>
+
+    <script type="text/html" id="tpl-enterprise-view">
+        <div class="card bgff">
+            <button class="btn">{{type}}</button>
+            <span class="scan float-right"><i class="icon icon-scan"></i>{{viewAmount}}</span>
+            <img src="{{avatar}}" alt="">
+            <div class="name f16">{{name}}</div>
+            <div class="f12">在职人数：{{employeeAmount}}</div>
+            <div class="f12">已被预约{{reservationAmount}}次</div>
+            <div class="ratting"></div>
+            <button class="btn btn-default"><i class="icon icon-"></i>收藏</button>
+        </div>
+        <div class="intro">
+
+        </div>
+    </script>
+    <script type="text/html" id="tpl-enterprise-case">
+        
+    </script>
+    <script src="./js/lib/jquery.js"></script>
+    <script src="./js/lib/template-web.js"></script>
+    <script src="./js/lib/pagination.js"></script>
+    <script src="./js/core.js"></script>
+    <script src="./js/enterprise.js"></script>
+</body>
+
+</html>
