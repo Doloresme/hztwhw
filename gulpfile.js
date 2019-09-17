@@ -49,16 +49,15 @@ gulp.task('less',function () {
 /*合并js*/
 gulp.task('js',function () {
     gulp.src(app.srcPath+'**/*.js')
-        .pipe(babelJs({
-            presets: ['@babel/env'],
-            sourceType: "script"
-        }))
+        // .pipe(babelJs({
+        //     presets: ['@babel/env'],
+        //     sourceType: "script"
+        // }))
         .pipe(gulp.dest(app.buildPath))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest(app.distPath))
-        .pipe(connect.reload())
+        .pipe(connect.reload()) //当内容发生改变时， 重新加载。
 });
-
 /*压缩图片*/
 gulp.task('image',function () {
     gulp.src(app.srcPath+'img/**/*')
@@ -86,7 +85,7 @@ gulp.task('server',['build'],function () {
     })
     /*监听哪些任务*/
     gulp.watch(app.srcPath+'**/*.html',['html']);
-    gulp.watch(app.srcPath+'**/*.js',['js']);
+    gulp.watch(app.srcPath+'js/**/*',['js']);
     gulp.watch(app.srcPath+'img/**/*',['image']);
     gulp.watch(app.srcPath+'**/*.less',['less']);
 

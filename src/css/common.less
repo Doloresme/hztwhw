@@ -102,6 +102,9 @@
 .c27{
     color: #272A34;
 }
+.c2B{
+    color: #2B354B;
+}
 
 .bgff{
     background-color: #fff;
@@ -223,6 +226,27 @@
     height: 11px;
     width: 10px;
 }
+.icon-more::before{
+    background-image: url('../img/icon_more.png');
+    width: 10px;
+    height: 18px;
+    vertical-align: -3px;
+    margin-left: 3px;
+}
+.icon-scan::before{
+    background-image: url('../img/icon_scan.png');
+    height: 16px;
+}
+.icon-reserve::before{
+    background-image: url('../img/icon_reserve.png');
+    height: 16px;
+}
+.icon-heart::before{
+    background-image: url('../img/icon_heart.png');
+    height: 16px;
+}
+
+
 
 .triangle{
     width: 0;
@@ -299,6 +323,33 @@ body{
     background-image: url('../img/share_zone.png');
 }
 
+// 评分
+.rating{			
+    position: relative;
+    padding: 10px;
+    ul{
+        float:left;
+    }
+    ul li{
+        list-style: none;
+        width:18px;
+        height:18px;
+        float:left;
+        background-image:url('../img/rating_star.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 10px;
+    }
+    ul li.on{
+        background-image:url('../img/rating_star_red.png');
+    }
+    ul span{
+        float:left;
+        padding-left:10px;
+        height:18;
+        line-height:18;
+    }
+}
 
 // 
 .container{

@@ -1,1 +1,55 @@
-!function(e,t){var o=e.UA={};for(var i in/MSIE ([\d.]+);/.test(t)?(o.ie=RegExp.$1,/Trident\/([\d.]+)/.test(t)&&(o.trident=RegExp.$1)):/AppleWebKit\/([\d.]+)/.test(t)?(o.webkit=RegExp.$1,/Chrome\/([\d.]+)/.test(t)?o.chrome=RegExp.$1:/Version\/([\d.]+)/.test(t)&&(o.safari=RegExp.$1)):/Firefox\/([\d.]+)/.test(t)?(o.firefox=RegExp.$1,/rv:([\d.]+)/.test(t)&&(o.gecko=RegExp.$1)):window.opera&&(o.opera=window.opera.version(),/Presto\/([\d.]+)/.test(t)&&(o.presto=RegExp.$1)),/(?:Android);?[\s\/]+([\d.]+)?/.test(t)?o.android=RegExp.$1:/(?:iPad|iPod|iPhone).*OS\s([\d_]+)/.test(t)&&(o.ios=RegExp.$1.replace(/_/g,".")),o.mobile=o.android||o.ios,o)o[i]=parseFloat(o[i])}(this,navigator.userAgent);
+/**
+ * ======================================
+ *
+ * - Framework - UserAgent Detector
+ * 
+ * ======================================
+ */
+
+(function(root, ua){
+
+	var UA = root.UA = {};
+
+	if(/MSIE ([\d.]+);/.test(ua)){
+		UA.ie = RegExp.$1;
+		
+		// ie6 7 是没有trident版本信息的
+		if(/Trident\/([\d.]+)/.test(ua)) 
+			UA.trident = RegExp.$1;
+		
+	} else if(/AppleWebKit\/([\d.]+)/.test(ua)){
+		UA.webkit = RegExp.$1;
+		
+		if(/Chrome\/([\d.]+)/.test(ua))
+			UA.chrome = RegExp.$1;
+		else if(/Version\/([\d.]+)/.test(ua))
+			UA.safari = RegExp.$1;
+		
+	} else if(/Firefox\/([\d.]+)/.test(ua)){
+		UA.firefox = RegExp.$1;
+		
+		if(/rv:([\d.]+)/.test(ua))
+			UA.gecko = RegExp.$1;
+
+	} else if(window.opera){ // > opera7.6
+		UA.opera = window.opera.version();
+
+		if(/Presto\/([\d.]+)/.test(ua))
+			UA.presto = RegExp.$1;
+	}
+	
+	// os detection
+	if (/(?:Android);?[\s\/]+([\d.]+)?/.test(ua)) {
+		UA.android = RegExp.$1;
+	} else if (/(?:iPad|iPod|iPhone).*OS\s([\d_]+)/.test(ua)) {
+		UA.ios = RegExp.$1.replace(/_/g, '.');
+	}
+	
+	UA.mobile = UA.android || UA.ios;
+
+// numeralize version
+for(var p in UA){
+    UA[p] = parseFloat(UA[p]);
+}
+
+})(this, navigator.userAgent);

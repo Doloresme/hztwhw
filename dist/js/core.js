@@ -1,1 +1,47 @@
-template.defaults.imports.dateFormat=function(e,t){function a(e){return e<10?"0"+e:e}var n=new Date(e),o=n.getFullYear(),r=n.getMonth()+1,s=n.getDate(),A=n.getHours(),d=n.getMinutes();n.getSeconds();return o+"-"+a(r)+"-"+a(s)+" "+a(A)+":"+a(d)},$("#header").load("../inc/header.html",function(){var a=$("#header").find(".search-box");$("#header").find(".search").on("click",function(){a.hasClass("hide")?(console.log(!0),a.removeClass("hide")):(console.log(!1),a.addClass("hide"))}),$(document).mouseup(function(e){var t=a;t.is(e.target)||0!==t.has(e.target).length||t.addClass("hide")}),$("#header").find(".search-input").blur(function(){$(this).val()})}),$("#footer").load("../inc/footer.html"),Image.BLINK="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+template.defaults.imports.dateFormat = function(timestamp, format){
+    function add0(m) { return m < 10 ? '0' + m : m };
+    var time = new Date(timestamp);
+    var y = time.getFullYear();
+    var m = time.getMonth() + 1;
+    var d = time.getDate();
+    var h = time.getHours();
+    var mm = time.getMinutes();
+    var s = time.getSeconds();
+    return y + '-' + add0(m) + '-' + add0(d) + ' ' + add0(h) + ':' + add0(mm);
+};
+
+(function () {
+
+    var headerCallback = function () {
+        var keyword = '',
+            $searchBox = $('#header').find('.search-box');
+        $('#header').find('.search').on('click', function () {
+            if ($searchBox.hasClass('hide')) {
+                console.log(true);
+                $searchBox.removeClass('hide');
+            } else {
+                console.log(false);
+                $searchBox.addClass('hide');
+            }
+        });
+
+        $(document).mouseup(function (e) {
+            var oTarget = $searchBox;
+            if (!oTarget.is(e.target) && oTarget.has(e.target).length === 0) {
+                oTarget.addClass('hide');
+            }
+        });
+
+        
+        $('#header').find('.search-input').blur(function(){
+            keyword = $(this).val();
+        })
+        
+    };
+
+    $('#header').load('../inc/header.html', headerCallback);
+    $('#footer').load('../inc/footer.html');
+    Image.BLINK = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+
+
+}())

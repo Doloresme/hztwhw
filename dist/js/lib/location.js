@@ -1,1 +1,27 @@
-location.searchMap=function(){var r=location.search;if(!r)return{};for(var a=r.replace("?","").split("&"),t={},e=0;e<a.length;e++){var i=a[e].split("="),n=i[0],c=i[1];t[n]?Array.isArray(t[n])?t[n].push(c):t[n]=[t[n],c]:t[n]=c}return t};
+(function(){
+    location.searchMap = function(){
+        var search = location.search;
+        if (!search){
+            return {};
+        }
+
+        var hashArr = search.replace('?','').split('&');
+        var hashMap = {};
+        for (var i = 0; i < hashArr.length; i++) {
+            var tempArr = hashArr[i].split('='),
+                k = tempArr[0],
+                v = tempArr[1];
+            if (hashMap[k]) {
+                if (Array.isArray(hashMap[k])) {
+                    hashMap[k].push(v);
+                } else {
+                    hashMap[k] = [hashMap[k], v];
+                }
+            } else {
+                hashMap[k] = v;
+
+            }
+        }
+        return hashMap;
+    };
+})()
