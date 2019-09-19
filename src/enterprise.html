@@ -90,6 +90,14 @@
                             {{/each}}
                         </div>
                         <div class="rating">
+                            <ul>
+                                <%for (var i =0; i< value.rating; i++){%>
+                                    <li class="on" data-score="<%=i+1%>" ></li>
+                                <% } %>
+                                <%for (var i =value.rating; i< 5; i++){%>
+                                    <li data-score= "<%=i+1%>" ></li>
+                                <% } %>
+                            </ul>
                         </div>
                     </a>
                 </li>

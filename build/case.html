@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/case.css">
+    <title>精选案例</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="wrapper">
+            <div class="function-box">
+                <div class="sort filter clearfix">
+                    <div class="input-box float-right">
+                        <input type="text" name="keyword" placeholder="请输入案例名称" class="case-input">
+                        <i class="icon icon-search"></i>
+                    </div>
+                    <span class="type active" data-type="complex">综合排序</span>
+                    <span class="type" data-type="complex">评分最高</span>
+                    <span class="type" data-type="complex">预定最多</span>
+                </div>
+            </div>
+            <div class="case-view">
+
+            </div>
+        </div>
+    </div>
+    <div id="pagination">
+
+    </div>
+    <div id="footer"></div>
+
+    <script type="text/html" id="tpl-case-list">
+        <ul class="case-ul clearfix">
+            {{each list as value}}
+                <li class="case-li float-left">
+                    <a href="{{value.url}}">
+                        <div class="left">
+                            <img src="{{value.coverImg}}" alt="" class="cover-img">
+                            <div class="time">{{value.date | dateFormat 'yyyy-MM-dd hh:mm'}}</div>
+                        </div>
+                        <div class="right c5A">
+                            <div class="title f16 f600">{{value.title}}</div>
+                            <div class="desc">{{value.desc}}</div>
+                            <div class="name"><img src="{{value.avatar}}" alt="" class="avatar">{{value.name}}</div>
+                        </div>
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+        
+    </script>
+    <script src="./js/lib/jquery.js"></script>
+    <script src="./js/lib/template-web.js"></script>
+    <script src="./js/lib/pagination.js"></script>
+    <script src="./js/core.js"></script>
+    <script src="./js/case.js"></script>
+</body>
+
+</html>

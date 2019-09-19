@@ -110,3 +110,120 @@
         
     }
 }
+
+
+// 杭业详情
+.enterprise-view{
+    .card{
+        width:320px;
+        height:404px;
+        padding: 10px;
+        .company{
+            color: #5A483E;
+            background:rgba(222,218,216,1);
+            border-radius:4px;
+            height: 20px;
+            padding: 0 10px;
+            line-height: 18px;
+        }
+        img{
+            display: block;
+            width:100px;
+            height:100px;
+            border:6px solid rgba(244,246,247,1);
+            margin: 20px auto;
+            border-radius: 50%;
+        }
+        .icon-scan{
+            vertical-align: -1px;
+            margin-right: 5px;
+        }
+        .f12{
+            line-height: 17px;
+            margin: 10px;
+        }
+        .amount{
+            margin-top:60px;
+        }
+        .rating{
+            ul{
+                margin-left: 50px;
+            }
+           span{
+                vertical-align: -3px;
+           }
+        }
+        .buttons{
+            text-align: center;
+            .btn{
+                margin: 10px 30px;
+            }
+            .icon-mark::before{
+                width: 15px;
+                height: 18px;
+                vertical-align: -4px;
+                margin-right: 3px;
+            }
+            .icon-reserve::before{
+                width: 17px;
+                height: 16px;
+                vertical-align: -3px;
+                margin-right: 3px;
+            }
+        }
+    }
+    .intro{
+        width: 720px;
+        margin-left: 360px;
+        .type, .description{
+            padding: 20px;
+        }
+        .type{  
+            height: 20px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+        .description{
+            position: relative;
+            height: 304px;
+            .share{
+                position: absolute;
+                bottom: -20px;
+                right: 10px;
+            }
+            .detail{
+                padding: 20px 10px;
+                line-height: 20px;
+                max-height: 200px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.enterpriser-rating{
+    padding: 20px;
+    box-sizing: border-box;
+    .rating{
+        width:430px;
+        height:80px;
+        border-radius:10px;
+        margin: 10px auto;
+        padding: 0;
+        ul{
+            padding: 20px;
+        }
+        li{
+            width: 36px;
+            height: 34px;
+            margin: 0 20px;
+            background-image:url('../img/icon_rating_star_l.png');
+            &.on{
+                background-image:url('../img/icon_rating_star_red_l.png');
+            }
+        }
+    }
+    .center{
+        margin-top: 20px;
+    }
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,28 +17,106 @@
     <div id="header"></div>
     <div class="container">
         <div class="wrapper enterprise-view">
-            
+
+        </div>
+        <div class="wrapper enterprise-case">
+
+        </div>
+        <div class="wrapper enterpriser-rating bgff">
+            <p class="f18 c27">服务案例：</p>
+            <div class="rating bgF4">
+                <ul class="clearfix">
+                    <li data-score="1" class="on"></li>
+                    <li data-score="2" class=""></li>
+                    <li data-score="3" class=""></li>
+                    <li data-score="4" class=""></li>
+                    <li data-score="5" class=""></li>
+                </ul>
+            </div>
+            <p class="c68 center">请点击上方五星进行评分</p>
+            <div class="center"><div class="btn btn-primary btn-fixed-w">发布评价</div></div>
         </div>
     </div>
     <div id="footer"></div>
 
     <script type="text/html" id="tpl-enterprise-view">
-        <div class="card bgff">
-            <button class="btn">{{type}}</button>
+        <div class="card bgff float-left">
+            <button class="btn btn-default company">{{type}}</button>
             <span class="scan float-right"><i class="icon icon-scan"></i>{{viewAmount}}</span>
             <img src="{{avatar}}" alt="">
-            <div class="name f16">{{name}}</div>
-            <div class="f12">在职人数：{{employeeAmount}}</div>
-            <div class="f12">已被预约{{reservationAmount}}次</div>
-            <div class="ratting"></div>
-            <button class="btn btn-default"><i class="icon icon-"></i>收藏</button>
+            <p class="name f16 c27 center f600">{{name}}</p>
+            <p class="f12 center">在职人数：{{employeeAmount}}</p>
+            <p class="f12 center amount">已被预约{{reservationAmount}}次</p>
+            <div class="rating">
+                <ul>
+                    <%for (var i =0; i< rating; i++){%>
+                        <li class="on" data-score="<%=i+1%>" ></li>
+                    <% } %>
+                    <%for (var i =rating; i< 5; i++){%>
+                        <li data-score= "<%=i+1%>" ></li>
+                    <% } %>
+                </ul>
+                <span>好评率{{ratingRate * 100}}%</span>
+            </div>
+            <div class="buttons">
+                <button class="btn btn-default"><i class="icon icon-mark"></i>收藏</button>
+                <button class="btn btn-default"><i class="icon icon-reserve"></i>预约</button>
+            </div>
         </div>
         <div class="intro">
-
+            <div class="type bgff">
+                <div class="float-right cA9 more">更多相关服务类型的企业>></div>
+                <span class="f18 c27">服务类型：</span>{{each serviceType}} <span class="btn btn-tag">{{$value}}</span> {{/each}}
+            </div>
+            <div class="description bgff">
+                <p class="f18 c27">企业简介：</p>
+                <p class="c27 detail">{{detail}}</p>
+                <div class="share">
+                    <a href="javascript:SocialShare('Weixin');" class="sp wx"></a>
+                    <a href="javascript:SocialShare('Weibo');" class="sp sina"></a>
+                    <a href="javascript:SocialShare('Qzone');" class="sp qzone"></a>
+                    <a href="javascript:SocialShare('Douban');" class="sp db"></a>
+                    <a href="javascript:SocialShare('QQ');" class="cqq sp"></a>
+                </div>
+            </div>
         </div>
     </script>
     <script type="text/html" id="tpl-enterprise-case">
-        
+        <div class="more cA9 float-right">更多>></div>
+        <p class="f18 c27">服务案例：</p>
+        <ul class="case">
+            {{each case as list}}
+                <li class="case-li bgF4">
+                    <img src="{{list.coverImgUrl}}" alt="">
+                    <div class="time f12">{{list.date | dateFormat 'yyyy-mm-dd HH:mm'}}</div>
+
+                </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script type="text/html" id="tpl-rating-list">
+        <p class="f18 c27">评分历史：</p>
+        <p class="f12 center amount">已被预约{{reservationAmount}}次</p>
+        <div class="rating">
+            <ul>
+                <%for (var i =0; i< rating; i++){%>
+                    <li class="on" data-score="<%=i+1%>" ></li>
+                <% } %>
+                <%for (var i =rating; i< 5; i++){%>
+                    <li data-score= "<%=i+1%>" ></li>
+                <% } %>
+            </ul>
+            <span>好评率{{ratingRate * 100}}%</span>
+        </div>
+        <ul class="evalution">
+            {{each evalution as list}}
+                <li>
+                    <img src="{{list.avatar}}" alt="" class="avatar">
+                    <span class="name">{{list.name}}</span>
+                </li>
+            {{/each}}
+        </ul>
+
     </script>
     <script src="./js/lib/jquery.js"></script>
     <script src="./js/lib/template-web.js"></script>

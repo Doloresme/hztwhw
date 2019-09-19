@@ -1,0 +1,106 @@
+.function-box{
+    .input-box{
+        position: relative;
+        .case-input{
+            padding: 0 15px;
+            width:240px;
+            height:30px;
+            line-height: 30px;
+            border-radius:15px;
+            border:1px solid rgba(221,221,221,1);
+            background:rgba(244,246,247,1);
+        }
+        .icon{
+            position: absolute;
+            right: 15px;
+            top: 4px;
+        }
+        .icon-search::before{
+            width: 18px;
+            height: 18px;
+        }
+    }
+    .sort{
+        height: 58px;
+        line-height: 58px;
+        border-bottom: 1px solid #DEDAD8;
+        .type{
+            margin-right: 40px;
+            color: #A9A09C;
+            &.active{
+                color: #5A483E;
+                font-weight: 600;
+            }
+        }
+        .icon-sort{
+            vertical-align: -1px;
+            margin-left: 3px;
+        }
+    }
+}
+
+
+.case-view{
+
+    .case-li{
+        width:500px;
+        height:150px;
+        border-radius:4px;
+        display: inline-block;
+        cursor: pointer;
+        padding: 15px;
+        margin-right: 20px;
+        &:nth-of-type(2n){
+            margin-right: 0;
+        }
+        &:hover{
+            background:rgba(255,255,255,1);
+        }
+        .cover-img{
+            width:200px;
+            height:150px;
+        }
+        .avatar{
+            width:18px;
+            height:18px;
+            margin: 6px 7px 0 0;
+            vertical-align: -3px;
+        }
+        
+        .left, .right{
+            float: left;
+        }
+        .left{
+            width: 200px;
+            padding-right: 10px;
+            position: relative;
+            .time{
+                position: absolute;
+                bottom: 5px;
+                color: #fff;
+                left: 5px;
+                background: rgba(39, 42, 51, 0.6);
+                border-radius:10px;
+                padding: 0 10px;
+                height: 20px;
+                line-height: 20px;
+            }
+        }
+        .right{
+            width: 290px;
+            .title{
+                height: 44px;
+                line-height: 22px;
+                overflow: hidden;
+            }
+            .desc{
+                max-height: 80px;
+                line-height: 20px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient:vertical;
+                -webkit-line-clamp: 4;
+            }
+        }
+    }
+}

@@ -18,7 +18,7 @@ var open = require('open');
 gulp.task('lib',function () {
     gulp.src(app.srcPath+'**/*.js')
         .pipe(gulp.dest(app.buildPath+'lib'))
-        .pipe(gulp.dest(app.distPath+'lib'))
+        // .pipe(gulp.dest(app.distPath+'lib'))
         .pipe(connect.reload()) //当内容发生改变时， 重新加载。
 });
 
@@ -29,7 +29,7 @@ gulp.task('html',function () {
     /*要操作哪些文件 确定源文件地址*/
     gulp.src(app.srcPath+'**/*.html')  /*src下所有目录下的所有.html文件*/
         .pipe(gulp.dest(app.buildPath)) //gulp.dest 要把文件放到指定的目标位置
-        .pipe(gulp.dest(app.distPath))
+        // .pipe(gulp.dest(app.distPath))
         .pipe(connect.reload()) //当内容发生改变时， 重新加载。
 });
 /*3.执行任务 通过命令行。gulp 任务名称*/
@@ -42,7 +42,7 @@ gulp.task('less',function () {
         .pipe(gulp.dest(app.buildPath))
         /*经过压缩，放到dist目录当中*/
         .pipe(cssmin())
-        .pipe(gulp.dest(app.distPath))
+        // .pipe(gulp.dest(app.distPath))
         .pipe(connect.reload())
 });
 
@@ -55,7 +55,7 @@ gulp.task('js',function () {
         // }))
         .pipe(gulp.dest(app.buildPath))
         // .pipe(uglify())
-        .pipe(gulp.dest(app.distPath))
+        // .pipe(gulp.dest(app.distPath))
         .pipe(connect.reload()) //当内容发生改变时， 重新加载。
 });
 /*压缩图片*/
@@ -63,7 +63,7 @@ gulp.task('image',function () {
     gulp.src(app.srcPath+'img/**/*')
         .pipe(gulp.dest(app.buildPath+'img'))
         .pipe(imagemin())
-        .pipe(gulp.dest(app.distPath+'img'))
+        // .pipe(gulp.dest(app.distPath+'img'))
         .pipe(connect.reload())
 });
 
@@ -90,7 +90,8 @@ gulp.task('server',['build'],function () {
     gulp.watch(app.srcPath+'**/*.less',['less']);
 
     //通过浏览器把指定的地址 （http://localhost:9999）打开。
-    open('http://localhost:9999');
+    // open('http://localhost:9999');
+    open('http://hztwh.fanhai-cloud.com/');
 });
 
 /*定义默认任务
