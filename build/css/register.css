@@ -1,0 +1,142 @@
+.register-box {
+  border-radius: 4px;
+  padding: 0 20px 30px;
+}
+.register-box .view-top {
+  height: 59px;
+  border-bottom: 1px solid #DEDAD8;
+  line-height: 59px;
+}
+.register-box .view-content {
+  width: 500px;
+  margin: 0 auto;
+}
+.register-box .view-content .progress {
+  padding: 20px 0;
+}
+.register-box .view-content .progress div {
+  display: inline-block;
+  color: #fff;
+  line-height: 30px;
+  font-size: 18px;
+}
+.register-box .view-content .progress p {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  line-height: 30px;
+}
+.register-box .view-content .progress p span {
+  display: inline-block;
+}
+.register-box .view-content .progress .one,
+.register-box .view-content .progress .two,
+.register-box .view-content .progress .three {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: #DDDDDD;
+  border-radius: 50%;
+  margin: 5px;
+}
+.register-box .view-content .progress .one .circle,
+.register-box .view-content .progress .two .circle,
+.register-box .view-content .progress .three .circle {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 30px;
+  height: 30px;
+  background: #DDDDDD;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+}
+.register-box .view-content .progress .one.active,
+.register-box .view-content .progress .two.active,
+.register-box .view-content .progress .three.active {
+  background: #6ab1e0;
+}
+.register-box .view-content .progress .one.active .circle,
+.register-box .view-content .progress .two.active .circle,
+.register-box .view-content .progress .three.active .circle {
+  position: absolute;
+  background: #6AB1E0;
+}
+.register-box .view-content .progress .line {
+  width: 186px;
+  height: 4px;
+  vertical-align: 23px;
+  margin: 0 -10px;
+  background: linear-gradient(270deg, #dddddd 0%, #dddddd 100%);
+}
+.register-box .view-content .progress .line.hover {
+  background: linear-gradient(270deg, #dddddd 0%, #6ab1e0 100%);
+}
+.register-box .view-content .progress .line.active {
+  background: linear-gradient(270deg, #6ab1e0 0%, #6ab1e0 100%);
+}
+.register-box .view-content .step {
+  display: block;
+}
+.register-box .view-content .step1 {
+  display: none;
+}
+.register-box .view-content .step2 {
+  display: none;
+}
+.register-box .view-content .step3 {
+  padding-bottom: 30px;
+}
+.register-box .view-content .step3 .account {
+  margin-top: 20px;
+}
+.register-box .view-content .form-group {
+  margin-top: 30px;
+  color: #272A34;
+}
+.register-box .view-content .form-group label {
+  width: 80px;
+  text-align: right;
+  display: inline-block;
+}
+.register-box .view-content .form-group input[type="text"],
+.register-box .view-content .form-group input[type="password"] {
+  width: 378px;
+  margin-left: 20px;
+  height: 30px;
+  padding: 0 10px;
+  background: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+}
+.register-box .view-content .form-group input[type="checkbox"] {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 20px;
+  vertical-align: -3px;
+}
+.register-box .view-content .form-group #phoneNumber {
+  width: 378px;
+}
+.register-box .view-content .form-group #phoneCode {
+  width: 230px;
+}
+.register-box .view-content .form-group .btn-code {
+  width: 138px;
+  height: 34px;
+  border-radius: 2px;
+  margin-left: 10px;
+  vertical-align: 0px;
+  border: 1px solid #fff;
+}
+.register-box .view-content .form-group .btn-step {
+  width: 500px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+}
+.register-box .view-content .account {
+  line-height: 40px;
+}

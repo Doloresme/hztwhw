@@ -97,3 +97,59 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
 }
+.view-top {
+  position: relative;
+  height: 240px;
+  background: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.view-top .cover-img {
+  width: 280px;
+  height: 210px;
+}
+.view-top .avatar {
+  width: 30px;
+  height: 30px;
+  vertical-align: -7px;
+  margin-right: 10px;
+}
+.view-top .title,
+.view-top .time {
+  margin-left: 300px;
+}
+.view-top .title {
+  height: 44px;
+  line-height: 22px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.view-top .share,
+.view-top .company {
+  position: absolute;
+  bottom: 0;
+}
+.view-top .company {
+  left: 310px;
+  margin: 15px 0;
+}
+.view-top .share {
+  right: 20px;
+}
+.view-top .share .sp {
+  margin: 15px 10px;
+}
+.view-content {
+  background: #fff;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.view-content .detail {
+  margin: 20px 0;
+  min-height: 300px;
+  line-height: 20px;
+}

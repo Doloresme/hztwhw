@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/event.css">
+    <title>专题活动</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="event-search-box bgff">
+            <div class="wrapper">
+                <div class="input-box float-right">
+                    <input type="text" name="keyword" placeholder="请输入关键词" class="event-input">
+                    <i class="icon icon-search"></i>
+                </div>
+                <span class="f20 c5A topic f600">专题活动 <i class="bg"></i></span><span class="f20 c5A f600 en"> Thematic activities</span>
+            </div>
+        </div>
+        <div class="wrapper event-view">
+            
+        </div>
+    </div>
+    <div id="pagination">
+        
+    </div>
+    <div id="footer"></div>
+
+    <script type="text/html" id="tpl-event-list">
+        <ul class="event-ul clearfix">
+            {{each list as value}}
+                <li class="event-li float-left">
+                    <a href="{{value.url}}">
+                        <img src="{{value.avatar}}" alt="">
+                        <div class="c27">
+                            <div class="title f22 f600">{{value.title}}</div>
+                            <div class="time f14">{{value.date | dateFormat 'yyyy-MM-dd hh:mm'}}</div>
+                            <button class="btn btn-default">查看详情</button>
+                        </div>
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+        
+    </script>
+    <script src="./js/lib/jquery.js"></script>
+    <script src="./js/lib/template-web.js"></script>
+    <script src="./js/lib/pagination.js"></script>
+    <script src="./js/core.js"></script>
+    <script src="./js/event.js"></script>
+</body>
+</html>

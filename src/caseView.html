@@ -26,7 +26,24 @@
     <div id="footer"></div>
 
     <script type="text/html" id="tpl-case-view">
-       
+        <div class="view-top c27">
+            <img src="{{coverImgUrl}}" alt="" class="cover-img float-left">
+            <p class="title f18 f600">{{title}}</p>
+            <div class="time f12">{{date | dateFormat 'yyyy-MM-dd hh:mm'}}</div>
+            <div class="company">
+                <img src="{{avatar}}" alt="" class="avatar">{{name}}
+            </div>
+            <div class="share">
+                <a href="javascript:SocialShare('Weixin');" class="sp wx"></a>
+                <a href="javascript:SocialShare('Weibo');" class="sp sina"></a>
+                <a href="javascript:SocialShare('Qzone');" class="sp qzone"></a>
+                <a href="javascript:SocialShare('Douban');" class="sp db"></a>
+                <a href="javascript:SocialShare('QQ');" class="cqq sp"></a>
+            </div>
+            </div>
+        <div class="view-content">
+            <div class="detail">{{detail}}</div>
+        </div>
     </script>
     <script src="./js/lib/jquery.js"></script>
     <script src="./js/lib/template-web.js"></script>
