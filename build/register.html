@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/webuploader.css">
     <title>注册</title>
 </head>
 
@@ -25,15 +26,15 @@
                 </div>
                 <div class="view-content">
                     <div class="progress">
-                        <div class="one active">
+                        <div class="step-circle one">
                             <div class="circle">1</div>
                         </div>
-                        <div class="line active"></div>
-                        <div class="two active">
+                        <div class="line hover"></div>
+                        <div class="step-circle two">
                             <div class="circle">2</div>
                         </div>
-                        <div class="line hover"></div>
-                        <div class="three">
+                        <div class="line"></div>
+                        <div class="step-circle three">
                             <div class="circle">3</div>
                         </div>
                         <p class="f12">
@@ -46,18 +47,23 @@
                         <div class="form-group">
                             <label for="phoneNumber">手机号码：</label><input type="text" name="phoneNumber" id="phoneNumber"
                                 placeholder="请输入您的手机号码">
+                            <p class="error-msg hide"><span class="null">请输入您的手机号码</span><span
+                                    class="format-err hide">手机号码格式错误，请重新填写！</span></p>
                         </div>
                         <div class="form-group">
                             <label for="phoneCode">验证码：</label><input type="text" name="phoneCode" id="phoneCode"
                                 placeholder="请输入验证码"><input type="button" value="获取验证码"
                                 class="btn btn-primary btn-code">
+                            <p class="error-msg hide">请输入验证码！</p>
                         </div>
                         <div class="form-group">
                             <label for="protocol">入驻协议：</label><input type="checkbox" name="protocol" id="protocol">
                             <span class="c27">我阅读并同意</span><a href="#" class="cA9">《杭州淘文化网注册协议》</a>
+                            <p class="error-msg hide">请阅读并同意入驻协议！</p>
                         </div>
+                        <p class="error-message"></p>
                         <div class="form-group">
-                            <div class="btn btn-primary btn-step">下一步</div>
+                            <div class="btn btn-primary btn-step getCode">下一步</div>
                         </div>
                         <div class="account">
                             <p class="c68">已有账号？请 <a href="#" class="cA9">登录</a>
@@ -65,40 +71,62 @@
                     </div>
                     <div class="step step2">
                         <div class="form-group">
-                            <label for="username">用户名：</label><input type="text" name="username" id="username"
+                            <label for="nickname">用户名：</label><input type="text" name="nickname" id="nickname"
                                 placeholder="请输入您的用户名">
+                            <p class="error-msg hide">请输入您的用户名！</p>
                         </div>
-                        <div class="form-group">
-                            <label for="phoneCode">头像：</label><input type="text" name="phoneCode" id="phoneCode"
-                                placeholder="请输入验证码">
+                        <div class="form-group img">
+                            <label for="avatar">头像：</label>
+                            <div class="img-btn img-btn1">
+                                <img src="" alt="">
+                                <div id="add-btn" class="add-btn">
+                                    <i class="icon icon-uploader"></i>
+                                </div>
+                            </div>
+                            <input type="hidden" name="avatarUrl" id="avatar">
+                            <p class="error-msg hide">请上传头像！</p>
                         </div>
                         <div class="form-group">
                             <label for="email">邮箱账号：</label><input type="text" name="email" id="email"
                                 placeholder="请输入您的邮箱，用于辅助信息">
+                            <p class="error-msg hide"><span class="null">请输入您的邮箱！</span><span
+                                    class="format-err hide">邮箱格式错误，请重新填写！</span></p>
                         </div>
                         <div class="form-group">
                             <label for="password">设置密码：</label><input type="password" name="password" id="password"
                                 placeholder="请输入6-18位数字及英文字母">
+                            <p class="error-msg hide"><span class="null">请输入您的密码！</span><span
+                                    class="format-err hide">密码格式错误，请输入6-18位数字及英文字母！</span></p>
                         </div>
                         <div class="form-group">
                             <label for="rePassword">重复密码：</label><input type="password" name="rePassword"
                                 id="rePassword" placeholder="请再次输入密码">
+                            <p class="error-msg hide"><span class="null">请再次输入您的密码！</span><span
+                                    class="format-err hide">重复密码与首次密码不符，请重新输入！</span></p>
                         </div>
+                        <p class="error-message"></p>
                         <div class="form-group">
-                            <div class="btn btn-primary btn-step">下一步</div>
+                            <div class="btn btn-primary btn-step register">下一步</div>
                         </div>
                     </div>
                     <div class="step step3">
                         <div class="form-group">
-                            <label for="identityType">选择身份：</label>
+                            <label for="identityType" class="identity-label">选择身份：</label>
                             <input type="hidden" name="identityType" id="identityType" value="M">
-
+                            <div class="role union">
+                                <i class="icon icon-role-union"></i>
+                                <div class="btn btn-default">工会人员</div>
+                            </div>
+                            <div class="role company">
+                                <i class="icon icon-role-company"></i>
+                                <div class="btn btn-default">工会人员</div>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="certification">认证方式：</label><span class="certification">认证后可使用更多功能</span>
+                            <label for="certification">认证方式：</label><span class="certification c68">认证后可使用更多功能</span>
                         </div>
                         <div class="form-group">
-                            <div class="btn btn-primary btn-step">申请认证</div>
+                            <div class="btn btn-primary btn-step certification">申请认证</div>
                         </div>
                         <div class="account">
                             <a href="#" class="more float-right">随便逛逛>></a>
@@ -115,6 +143,8 @@
     <div id="footer"></div>
     <script src="./js/lib/jquery.js"></script>
     <script src="./js/lib/template-web.js"></script>
+    <script src="./js/lib/location.js"></script>
+    <script src="./js/lib/webuploader.min.js"></script>
     <script src="./js/core.js"></script>
     <script src="./js/register.js"></script>
 </body>

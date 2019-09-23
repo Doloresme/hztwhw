@@ -1,0 +1,36 @@
+<form id="application-window" action="/rest/user/login" method="post" class="ui-window">
+    <div class="ui-window-header">
+        <div class="ui-window-title title">登录</div>
+        <div class="ui-window-close"></div>
+    </div>
+    <div class="ui-window-body">
+        <div class="form-group">
+            <label for="name">账号：</label>
+            <input type="text" value="" name="name" placeholder="手机号/邮箱" id="name" />
+        </div>
+        <div class="form-group">
+            <label for="password">密码：</label>
+            <input type="password" value="" name="password" id="password" />
+        </div>
+        <div class="form-group">
+            <div class="float-right">忘记密码？</div>
+        </div>
+        <div class="error-msg warning"></div>
+        <div class="form-group submit">
+            <input type="submit" value="登录" id="login" />
+        </div>
+    </div>
+</form>
+<div class="ui-mask"></div>
+<div id="success-window" class="ui-window">
+    <div class="ui-window-header">
+        <div class="ui-window-title title">申请成功</div>
+        <div class="ui-window-close"></div>
+    </div>
+    <div class="ui-window-body">
+        <div class="tipSuccess">申请提交成功, 我们会尽快联系您!</div>
+        <div class="submit">
+            <input type="button" value="完成" id="successButton" />
+        </div>
+    </div>
+</div>

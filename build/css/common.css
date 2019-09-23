@@ -260,6 +260,21 @@
   background-image: url('../img/icon_heart.png');
   height: 16px;
 }
+.icon-uploader::before {
+  background-image: url('../img/add.png');
+  height: 40px;
+  width: 40px;
+}
+.icon-role-company::before {
+  background-image: url('../img/icon_role_company.png');
+  height: 42px;
+  width: 45px;
+}
+.icon-role-union::before {
+  background-image: url('../img/icon_role_union.png');
+  height: 42px;
+  width: 36px;
+}
 .more {
   cursor: pointer;
 }
@@ -360,6 +375,162 @@ body {
   height: 18;
   line-height: 18;
 }
+.ui-window {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -300px;
+  z-index: 110;
+  min-width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: #fff;
+  font-size: 14px;
+  width: 600px;
+  border-radius: 10px;
+  border: 1px solid #E8E8E8;
+}
+.ui-window .form-group {
+  position: relative;
+  margin-top: 40px;
+  color: #272A34;
+}
+.ui-window .form-group.img .error-msg {
+  top: 140px;
+}
+.ui-window .form-group label {
+  width: 80px;
+  text-align: right;
+  display: inline-block;
+}
+.ui-window .form-group .identity-label {
+  vertical-align: 100px;
+}
+.ui-window .form-group input[type="text"],
+.ui-window .form-group input[type="password"] {
+  width: 378px;
+  margin-left: 20px;
+  height: 30px;
+  padding: 0 10px;
+  background: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+}
+.ui-window .form-group input[type="text"].warning,
+.ui-window .form-group input[type="password"].warning {
+  border-color: #ED473F;
+}
+.ui-window .form-group input[type="checkbox"] {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 20px;
+  vertical-align: -3px;
+}
+.ui-window .warning {
+  color: #ED473F;
+}
+.ui-window input[type="button"] {
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  text-align: center;
+  margin-right: 20px;
+  background: transparent;
+}
+.ui-window input[type="button"].active {
+  width: 80px;
+  height: 30px;
+  border-radius: 4px;
+  background: #4CA4FF;
+  text-align: center;
+  color: #fff;
+  border: 1px solid #4CA4FF;
+}
+.ui-window input:focus,
+.ui-window textarea:focus,
+.ui-window select:focus {
+  border-color: #4CA4FF;
+}
+.ui-window input.warning {
+  border-color: #ED473F;
+}
+.ui-window .error-msg {
+  height: 25px;
+  line-height: 50px;
+  text-align: center;
+}
+.ui-window textarea {
+  width: 350px;
+  padding: 5px 10px;
+  line-height: 20px;
+  border: 1px solid #d9d9d9;
+  resize: none;
+}
+.ui-window input[type="submit"],
+.ui-window .submit input[type="button"] {
+  width: 143px;
+  height: 40px;
+  background: #4ca4ff;
+  border-radius: 20px;
+  text-align: center;
+  margin: 15px auto;
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 40px;
+  cursor: pointer;
+}
+.ui-window input[type="submit"]:hover,
+.ui-window .submit input[type="button"]:hover {
+  background: #3e93ec;
+}
+.ui-window .submit {
+  text-align: center;
+}
+.ui-window select {
+  display: inline-block;
+  width: 130px;
+  line-height: 1.5;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  transition: border-color ease-in-out 0.15s;
+}
+.ui-window span {
+  padding: 0 10px;
+}
+.ui-window #captcha {
+  width: 200px;
+}
+.ui-window #captchaImg {
+  vertical-align: -23px;
+  margin: 10px;
+}
+.ui-mask {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+}
+#success-window {
+  width: 450px;
+}
+#success-window .tipSuccess {
+  line-height: 30px;
+  font-size: 18px;
+  padding: 30px 70px 20px 20px;
+  text-align: center;
+}
+#success-window .submit input {
+  margin-left: -25px;
+}
+/* 微信二维码分享 */
 .container {
   margin-top: 20px;
   min-height: 500px;

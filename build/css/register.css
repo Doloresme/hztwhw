@@ -53,11 +53,18 @@
   text-align: center;
 }
 .register-box .view-content .progress .one.active,
+.register-box .view-content .progress .one {
+  background: #6ab1e0;
+}
+.register-box .view-content .progress .one.active .circle,
+.register-box .view-content .progress .one .circle {
+  position: absolute;
+  background: #6AB1E0;
+}
 .register-box .view-content .progress .two.active,
 .register-box .view-content .progress .three.active {
   background: #6ab1e0;
 }
-.register-box .view-content .progress .one.active .circle,
 .register-box .view-content .progress .two.active .circle,
 .register-box .view-content .progress .three.active .circle {
   position: absolute;
@@ -76,29 +83,42 @@
 .register-box .view-content .progress .line.active {
   background: linear-gradient(270deg, #6ab1e0 0%, #6ab1e0 100%);
 }
-.register-box .view-content .step {
-  display: block;
-}
-.register-box .view-content .step1 {
-  display: none;
-}
-.register-box .view-content .step2 {
-  display: none;
-}
 .register-box .view-content .step3 {
   padding-bottom: 30px;
 }
 .register-box .view-content .step3 .account {
   margin-top: 20px;
 }
+.register-box .view-content .error-message {
+  line-height: 40px;
+  text-align: center;
+  color: red;
+  height: 20px;
+}
+.register-box .view-content .error-msg {
+  line-height: 20px;
+  text-align: center;
+  color: red;
+  height: 20px;
+  position: absolute;
+  left: 101px;
+  top: 35px;
+}
 .register-box .view-content .form-group {
-  margin-top: 30px;
+  position: relative;
+  margin-top: 40px;
   color: #272A34;
+}
+.register-box .view-content .form-group.img .error-msg {
+  top: 140px;
 }
 .register-box .view-content .form-group label {
   width: 80px;
   text-align: right;
   display: inline-block;
+}
+.register-box .view-content .form-group .identity-label {
+  vertical-align: 100px;
 }
 .register-box .view-content .form-group input[type="text"],
 .register-box .view-content .form-group input[type="password"] {
@@ -109,6 +129,10 @@
   background: #ffffff;
   border-radius: 2px;
   border: 1px solid #dddddd;
+}
+.register-box .view-content .form-group input[type="text"].warning,
+.register-box .view-content .form-group input[type="password"].warning {
+  border-color: #ED473F;
 }
 .register-box .view-content .form-group input[type="checkbox"] {
   display: inline-block;
@@ -136,6 +160,72 @@
   height: 40px;
   line-height: 40px;
   border-radius: 20px;
+}
+.register-box .view-content .form-group .role {
+  position: relative;
+  display: inline-block;
+  margin: 20px 50px 70px 30px;
+  width: 92px;
+  height: 92px;
+  background: #f4f6f7;
+  border-radius: 50%;
+}
+.register-box .view-content .form-group .role .btn {
+  position: absolute;
+  width: 80px;
+  left: 6px;
+  border-radius: 4px;
+  bottom: -45px;
+  font-size: 14px;
+  padding: 0;
+}
+.register-box .view-content .form-group .role .btn.active {
+  background: #A9A09C;
+  color: #fff;
+}
+.register-box .view-content .form-group .certification {
+  margin-left: 30px;
+}
+.register-box .view-content .form-group .img-btn {
+  position: relative;
+  top: -14px;
+  left: 101px;
+  width: 131px;
+  height: 130px;
+  background: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+}
+.register-box .view-content .form-group .img-btn.no-border {
+  border: none;
+  background: transparent;
+  border-radius: 0;
+}
+.register-box .view-content .form-group .img-btn .uploaded {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+.register-box .view-content .form-group .add-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+.register-box .view-content .form-group .webuploader-pick {
+  background: transparent;
+  padding: 0;
+}
+.register-box .view-content .form-group .role .icon {
+  position: absolute;
+  left: 24px;
+  top: 21px;
+}
+.register-box .view-content .form-group .role .icon.icon-role-union {
+  left: 28px;
 }
 .register-box .view-content .account {
   line-height: 40px;

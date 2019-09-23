@@ -36,6 +36,13 @@ template.defaults.imports.dateFormat = function(timestamp, format){
         $('#header').find('.search-input').blur(function(){
             keyword = $(this).val();
         })
+
+        $('#login').click(function(){
+            $('#loginBox').load('../inc/loginForm.html');
+        })
+        $('#register').click(function(){
+            location.href = '/register.html' + '?href=' + location.href;
+        })
         
     };
 
@@ -43,5 +50,5 @@ template.defaults.imports.dateFormat = function(timestamp, format){
     $('#footer').load('../inc/footer.html');
     Image.BLINK = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
 
-
+    
 }())
