@@ -57,11 +57,18 @@
   padding: 0;
 }
 .btn-box {
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 4px;
   display: inline-block;
   cursor: pointer;
+}
+.btn-box .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .btn-box-l {
   width: 60px;
@@ -215,6 +222,15 @@
   background-image: url('../img/icon_home_s.png');
   height: 14px;
 }
+.icon-up::before {
+  background-image: url('../img/icon_arrow_up.png');
+  height: 8px;
+  width: 14px;
+}
+.icon-tel::before {
+  background-image: url('../img/icon_telphone.png');
+  height: 14px;
+}
 .icon-email::before {
   background-image: url('../img/icon_email.png');
   height: 12px;
@@ -222,6 +238,11 @@
 .icon-address::before {
   background-image: url('../img/icon_address.png');
   height: 18px;
+}
+.icon-calendar::before {
+  background-image: url('../img/icon_calendar.png');
+  height: 15px;
+  width: 14px;
 }
 .icon-quot-left::before {
   background-image: url('../img/icon_quot_left.png');
@@ -274,6 +295,16 @@
   background-image: url('../img/icon_role_union.png');
   height: 42px;
   width: 36px;
+}
+.icon-wechat::before {
+  background-image: url('../img/share_wechat.png');
+  width: 24px;
+  height: 24px;
+}
+.icon-qq::before {
+  background-image: url('../img/share_qq.png');
+  width: 24px;
+  height: 24px;
 }
 .more {
   cursor: pointer;
@@ -379,16 +410,44 @@ body {
   position: fixed;
   left: 50%;
   top: 50%;
-  margin: -300px;
+  margin: -250px;
   z-index: 110;
-  min-width: 350px;
   border: 1px solid #ccc;
   border-radius: 2px;
   background: #fff;
   font-size: 14px;
-  width: 600px;
-  border-radius: 10px;
+  width: 500px;
+  border-radius: 4px;
   border: 1px solid #E8E8E8;
+}
+.ui-window .ui-window-header {
+  user-select: none;
+  cursor: move;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #DEDAD8;
+}
+.ui-window .ui-window-title {
+  text-align: center;
+  color: #5A483E;
+  font-size: 16px;
+}
+.ui-window .ui-window-close {
+  position: absolute;
+  right: 20px;
+  top: 13px;
+  width: 16px;
+  height: 16px;
+  background: url('../img/close.png') no-repeat center;
+  cursor: pointer;
+}
+.ui-window .ui-window-body {
+  width: 440px;
+  margin: 10px auto;
+}
+.ui-window .changePassword {
+  line-height: 40px;
+  margin-right: 20px;
 }
 .ui-window .form-group {
   position: relative;
@@ -399,7 +458,7 @@ body {
   top: 140px;
 }
 .ui-window .form-group label {
-  width: 80px;
+  width: 70px;
   text-align: right;
   display: inline-block;
 }
@@ -408,10 +467,10 @@ body {
 }
 .ui-window .form-group input[type="text"],
 .ui-window .form-group input[type="password"] {
-  width: 378px;
+  width: 309px;
   margin-left: 20px;
   height: 30px;
-  padding: 0 10px;
+  padding-left: 10px;
   background: #ffffff;
   border-radius: 2px;
   border: 1px solid #dddddd;
@@ -427,85 +486,67 @@ body {
   margin-left: 20px;
   vertical-align: -3px;
 }
+.ui-window .form-group .cA9 {
+  cursor: pointer;
+}
+.ui-window .form-group.submit {
+  margin-top: 25px;
+}
+.ui-window .form-group.clearfix {
+  margin: 0px 0 30px;
+}
+.ui-window .form-group.clearfix .float-right {
+  line-height: 25px;
+}
+.ui-window .form-group #phoneCode,
+.ui-window .form-group #phoneCode-p {
+  width: 180px;
+}
+.ui-window .form-group .btn-code {
+  width: 118px;
+  height: 34px;
+  border-radius: 2px;
+  margin-left: 10px;
+  vertical-align: 0px;
+  border: 1px solid #fff;
+}
+.ui-window .third-login div {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.ui-window .third-login .c68 {
+  vertical-align: 8px;
+}
 .ui-window .warning {
   color: #ED473F;
-}
-.ui-window input[type="button"] {
-  width: 80px;
-  height: 30px;
-  border-radius: 4px;
-  border: 1px solid #d9d9d9;
-  text-align: center;
-  margin-right: 20px;
-  background: transparent;
-}
-.ui-window input[type="button"].active {
-  width: 80px;
-  height: 30px;
-  border-radius: 4px;
-  background: #4CA4FF;
-  text-align: center;
-  color: #fff;
-  border: 1px solid #4CA4FF;
 }
 .ui-window input:focus,
 .ui-window textarea:focus,
 .ui-window select:focus {
-  border-color: #4CA4FF;
+  border-color: #A9A09C;
 }
 .ui-window input.warning {
   border-color: #ED473F;
 }
 .ui-window .error-msg {
   height: 25px;
-  line-height: 50px;
+  line-height: 0px;
   text-align: center;
-}
-.ui-window textarea {
-  width: 350px;
-  padding: 5px 10px;
-  line-height: 20px;
-  border: 1px solid #d9d9d9;
-  resize: none;
 }
 .ui-window input[type="submit"],
 .ui-window .submit input[type="button"] {
-  width: 143px;
+  width: 440px;
+  padding: 0;
   height: 40px;
-  background: #4ca4ff;
   border-radius: 20px;
   text-align: center;
-  margin: 15px auto;
+  margin: 0px auto 20px;
   font-size: 18px;
   color: #ffffff;
   line-height: 40px;
-  cursor: pointer;
-}
-.ui-window input[type="submit"]:hover,
-.ui-window .submit input[type="button"]:hover {
-  background: #3e93ec;
-}
-.ui-window .submit {
-  text-align: center;
-}
-.ui-window select {
-  display: inline-block;
-  width: 130px;
-  line-height: 1.5;
-  padding: 6px 10px;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  transition: border-color ease-in-out 0.15s;
-}
-.ui-window span {
-  padding: 0 10px;
-}
-.ui-window #captcha {
-  width: 200px;
-}
-.ui-window #captchaImg {
-  vertical-align: -23px;
-  margin: 10px;
 }
 .ui-mask {
   display: none;
@@ -518,22 +559,61 @@ body {
   filter: alpha(opacity=30);
   opacity: 0.3;
 }
-#success-window {
-  width: 450px;
+#password-window .form-group {
+  margin-top: 25px;
 }
-#success-window .tipSuccess {
+#success-window {
+  width: 250px;
+  margin-left: -125px;
+  margin-top: -400px;
+  display: none;
+}
+#success-window .ui-window-body {
+  width: auto;
+}
+#success-window .tip {
   line-height: 30px;
   font-size: 18px;
-  padding: 30px 70px 20px 20px;
+  padding: 0 20px;
   text-align: center;
 }
-#success-window .submit input {
-  margin-left: -25px;
+#success-window .tip::before {
+  display: inline-block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-size: 15px 15px;
+  background-position: 8px 8px;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  vertical-align: -7px;
+}
+#success-window .suc.tip::before {
+  background-color: #5cb85c;
+  background-image: url('../img/suc.png');
+}
+#success-window .err.tip::before {
+  background-color: #ED473F;
+  background-image: url('../img/err.png');
 }
 /* 微信二维码分享 */
 .container {
   margin-top: 20px;
   min-height: 500px;
+}
+.container .wrapper {
+  position: relative;
+}
+.container .wrapper .func-nav {
+  position: absolute;
+  right: -40px;
+  bottom: 0px;
+  width: 40px;
+}
+.container .wrapper .func-nav .icon-home::before {
+  width: 16px;
+  height: 16px;
 }
 .banner {
   width: 100%;

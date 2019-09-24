@@ -1,5 +1,7 @@
 (function () {
-    var step = location.searchMap().step || 0;
+    var step = location.searchMap().step || 0,
+        href = location.searchMap().href || '/';
+        console.log(href)
     changeProgress(step);
 
     function changeProgress(step) {
@@ -22,7 +24,7 @@
                 $line.addClass('active');
                 $stepCircle.addClass('active');
                 return;
-                return;
+            return;
         }
     }
 
@@ -271,6 +273,10 @@
                     location.href = '/companyCertify.html';
                 }
                 return;
+            })
+
+            $('.step3 .more').click(function(){
+                location.href = href;
             })
         }
 

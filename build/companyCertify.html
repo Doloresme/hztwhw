@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/_slider.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/certify.css">
+    <title>企业入驻认证申请</title>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="wrapper certification bgff">
+            <div class="certify-box">
+                <form action="/rest" method="post">
+                    <div class="title c5A">企业入驻申请表</div>
+                    <div class="line-title">
+                        基本信息：
+                    </div>
+                    <div class="form-group required">
+                        <label for="companyName">企业名称：</label><input type="text" name="companyName" id="companyName"
+                            placeholder="请输入企业名称，不超过50个字" max-length="50">
+                        <p class="error-msg hide">请输入企业名称！</p>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="func-nav">
+                <div class="btn-box btn-box-default"><i class="icon icon-home"></i></div>
+                <div class="btn-box btn-box-default"><i class="icon icon-up"></i></div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <div id="loginBox"></div>
+    <script type="text/html" id="tpl-release-list">
+
+    </script>
+    <script src="./js/lib/drag.js"></script>
+    <script src="./js/lib/slider.1.js"></script>
+    <script src="./js/lib/jquery.js"></script>
+    <script src="./js/lib/template-web.js"></script>
+    <script src="./js/core.js"></script>
+    <script src="./js/companyCertify.js"></script>
+</body>
+
+</html>

@@ -6,8 +6,12 @@
     line-height: 60px;
     .logo,.search,.login{
         display: inline-block;
+        &.hide{
+            display: none;
+        }
     }
-    .login{
+    .login,
+    .user{
         width: 108px;
         height: 60px;
         background: #A9A09C;
@@ -15,6 +19,67 @@
         cursor: pointer;
         span{
             padding: 10px;
+        }
+    }
+    .user{
+        padding: 0 5px;
+        box-sizing: border-box;
+        .avatar{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            vertical-align: 20px;
+        }
+        .first-nav{
+            display: inline-block;
+            width: 70px;
+            position: relative;
+            .nickname{
+                display: inline-block;
+                color: #fff;
+                width: 72px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding: 0;
+                text-align: center;
+            }
+            
+        }
+        .first-nav a.hasAngel::after{
+            content:"";
+            display:inline-block;
+            margin-left: 6px;
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 5px solid #fff;
+            position: absolute;
+            right: -7px;
+            top: 28px;
+        }
+        .first-nav:hover .nav2{
+            display: inline-block;
+            top: 60px;
+            left: -14px;
+            width: 108px;
+            background: #A9A09C;
+            opacity:0.9;
+            a{
+                color: #fff;
+            }
+            li{
+                display: block;
+                line-height: 20px;
+                margin-left: 0px;
+                padding: 5px 0;
+                text-align: center;
+                
+            }
+            li:hover a{
+                color: #5A483E;
+            }
         }
     }
     .search{
@@ -114,6 +179,7 @@ a {
     background: #f8f8f8;
     width: 100%;
     margin-left: -15px;
+    padding-bottom: 5px;
 }
 .nav .nav2 li{
     display: block;

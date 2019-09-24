@@ -1,4 +1,4 @@
-<form id="application-window" action="/rest/user/login" method="post" class="ui-window">
+<form id="login-window" action="/rest/user/login" method="post" class="ui-window hide">
     <div class="ui-window-header">
         <div class="ui-window-title title">登录</div>
         <div class="ui-window-close"></div>
@@ -10,27 +10,77 @@
         </div>
         <div class="form-group">
             <label for="password">密码：</label>
-            <input type="password" value="" name="password" id="password" />
+            <input type="password" value="" name="password" id="password" placeholder="请输入密码" />
         </div>
-        <div class="form-group">
-            <div class="float-right">忘记密码？</div>
-        </div>
-        <div class="error-msg warning"></div>
+        <div class="float-right changePassword">忘记密码？</div>
         <div class="form-group submit">
-            <input type="submit" value="登录" id="login" />
+            <div class="error-msg warning"></div>
+            <input type="submit" value="登录" id="login" class="btn btn-primary" />
+        </div>
+        <div class="form-group clearfix">
+            <div class="float-right">还没有账户？去<span class="register cA9">注册</span></div>
+            <div class="third-login"><span class="c68">第三方账号登录：</span>
+                <div class="wechat"><i class="icon icon-wechat"></i></div>
+                <div class="qq"><i class="icon icon-qq"></i></div>
+            </div>
         </div>
     </div>
 </form>
 <div class="ui-mask"></div>
+
 <div id="success-window" class="ui-window">
+    <div class="ui-window-body">
+        <div class="tip suc">登录成功!</div>
+    </div>
+</div>
+
+<form id="bindPhone-window" action="/rest/send/code" method="post" class="ui-window hide">
     <div class="ui-window-header">
-        <div class="ui-window-title title">申请成功</div>
+        <div class="ui-window-title title">绑定手机号</div>
         <div class="ui-window-close"></div>
     </div>
     <div class="ui-window-body">
-        <div class="tipSuccess">申请提交成功, 我们会尽快联系您!</div>
-        <div class="submit">
-            <input type="button" value="完成" id="successButton" />
+        <div class="form-group">
+            <label for="phoneNumber">手机号码：</label><input type="text" name="phoneNumber" id="phoneNumber"
+                placeholder="请输入您的手机号码">
+        </div>
+        <div class="form-group">
+            <label for="phoneCode">验证码：</label><input type="text" name="phoneCode" id="phoneCode"
+                placeholder="请输入验证码"><input type="button" value="获取验证码" class="btn btn-primary btn-code">
+        </div>
+        <div class="form-group submit">
+            <div class="error-msg warning"></div>
+            <input type="submit" value="立即绑定" id="bindPhone" class="btn btn-primary" />
         </div>
     </div>
-</div>
+</form>
+
+
+<form id="password-window" action="/rest/send/code" method="post" class="ui-window hide">
+    <div class="ui-window-header">
+        <div class="ui-window-title title">找回密码</div>
+        <div class="ui-window-close"></div>
+    </div>
+    <div class="ui-window-body">
+        <div class="form-group">
+            <label for="phoneNumber-p">手机号码：</label><input type="text" name="phoneNumber" id="phoneNumber-p"
+                placeholder="请输入您的手机号码">
+        </div>
+        <div class="form-group">
+            <label for="phoneCode-p">验证码：</label><input type="text" name="phoneCode" id="phoneCode-p"
+                placeholder="请输入验证码"><input type="button" value="获取验证码" class="btn btn-primary btn-code">
+        </div>
+        <div class="form-group">
+            <label for="password-p">新密码：</label>
+            <input type="password" value="" name="password" id="password-p" placeholder="请输入6-18位数字及英文字母" />
+        </div>
+        <div class="form-group">
+            <label for="rePassword">重复密码：</label>
+            <input type="password" value="" name="rePassword" id="rePassword" placeholder="请再次输入密码" />
+        </div>
+        <div class="form-group submit">
+            <div class="error-msg warning"></div>
+            <input type="submit" value="登录" id="savePassword" class="btn btn-primary" />
+        </div>
+    </div>
+</form>

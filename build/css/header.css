@@ -10,15 +10,81 @@
 .header .login {
   display: inline-block;
 }
-.header .login {
+.header .logo.hide,
+.header .search.hide,
+.header .login.hide {
+  display: none;
+}
+.header .login,
+.header .user {
   width: 108px;
   height: 60px;
   background: #A9A09C;
   color: #fff;
   cursor: pointer;
 }
-.header .login span {
+.header .login span,
+.header .user span {
   padding: 10px;
+}
+.header .user {
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+.header .user .avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: 20px;
+}
+.header .user .first-nav {
+  display: inline-block;
+  width: 70px;
+  position: relative;
+}
+.header .user .first-nav .nickname {
+  display: inline-block;
+  color: #fff;
+  width: 72px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0;
+  text-align: center;
+}
+.header .user .first-nav a.hasAngel::after {
+  content: "";
+  display: inline-block;
+  margin-left: 6px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #fff;
+  position: absolute;
+  right: -7px;
+  top: 28px;
+}
+.header .user .first-nav:hover .nav2 {
+  display: inline-block;
+  top: 60px;
+  left: -14px;
+  width: 108px;
+  background: #A9A09C;
+  opacity: 0.9;
+}
+.header .user .first-nav:hover .nav2 a {
+  color: #fff;
+}
+.header .user .first-nav:hover .nav2 li {
+  display: block;
+  line-height: 20px;
+  margin-left: 0px;
+  padding: 5px 0;
+  text-align: center;
+}
+.header .user .first-nav:hover .nav2 li:hover a {
+  color: #5A483E;
 }
 .header .search {
   width: 68px;
@@ -114,6 +180,7 @@ a {
   background: #f8f8f8;
   width: 100%;
   margin-left: -15px;
+  padding-bottom: 5px;
 }
 .nav .nav2 li {
   display: block;

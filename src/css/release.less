@@ -1,0 +1,80 @@
+.release-func-box{
+    height: 80px;
+    margin-top: 20px;
+    line-height: 80px;
+    .btn{
+        margin: 20px 0;
+    }
+}
+
+.release-view{
+    .release-ul{
+        margin: 10px 0 20px;
+    }
+    .release-li{
+        position: relative;
+        width:530px;
+        height:440px;
+        background:rgba(255,255,255,1);
+        border-radius:5px;
+        margin-right: 20px;
+        &:nth-of-type(2n){
+            margin-right: 0;
+        }
+        img{
+            width:530px;
+            height:280px;
+            border-radius:5px 5px 0px 0px;
+        }
+        .title{
+            line-height: 30px;
+            max-height: 60px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        .c27{
+            padding: 10px;
+        }
+        .time{
+            line-height: 20px;
+            margin-top: 15px;
+        }
+        .btn{
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -50px;
+        }
+    }
+}
+
+// releaseView
+
+.view-top{
+    .title{
+        line-height: 56px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .time, .desc{
+        width: 746px;
+        line-height: 20px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    
+}
+.view-content{
+    p{
+        line-height: 25px;
+        margin: 20px 0 10px;
+    }
+    .detail{
+        background: #fff;
+        min-height: 300px;
+        padding: 30px;
+    }
+}
